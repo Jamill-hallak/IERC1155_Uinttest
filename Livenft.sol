@@ -147,7 +147,6 @@ function buy (uint256 _tokenId,uint256 _tokenAmount) external  {
     user_tier[msg.sender]=get_user_Tier(_tokenId);
 
    emit buy_nfts(_tokenId, msg.sender, _tokenAmount);
-
 }
 
 
@@ -156,35 +155,6 @@ function buy (uint256 _tokenId,uint256 _tokenAmount) external  {
     BUSD_contact.transfer(msg.sender, Busd_balance);
     Busd_balance =0 ;
     emit Log_withdraw_Busd( BUSD_contact.balanceOf(address(this))) ;
-
-
-        }
+    }
+    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
